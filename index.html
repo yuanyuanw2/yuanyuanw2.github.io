@@ -28,7 +28,7 @@
     color: var(--fg);
     background: var(--bg);
     line-height: 1.5;
-    font-size: 15px;
+    font-size: 14px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -45,10 +45,13 @@
   }
   a:hover { color: var(--accent-hover); border-bottom-color: var(--accent-hover); }
 
+  .icon-link { color: var(--muted); }
+  .icon-link:hover { color: var(--accent); }
+
   /* Header */
   header.intro {
     display: grid;
-    grid-template-columns: 1fr 170px;
+    grid-template-columns: 1fr 200px;
     gap: 36px;
     align-items: start;
     margin-bottom: 36px;
@@ -222,53 +225,37 @@
 
   <header class="intro">
     <div class="text">
-      <h1>Yuanyuan Wang &nbsp;<span style="font-weight:400;">(王媛媛)</span></h1>
-      <p class="role">Postdoctoral Researcher in Machine Learning</p>
+      <h1>Yuanyuan Wang &nbsp;<span style="font-weight:400;">(王媛媛)</span><a href="mailto:wangyuanyuan0912@gmail.com" class="icon-link" aria-label="Email" title="Email" style="margin-left: 12px; vertical-align: middle; display: inline-block; border-bottom: none;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg></a></h1>
       <p>
-        <a href="https://mbzuai.ac.ae/" target="_blank" rel="noopener">Mohamed bin Zayed University of Artificial Intelligence (MBZUAI)</a><br>
-        Working with <a href="https://mingming-gong.github.io/" target="_blank" rel="noopener">A/Prof. Mingming Gong</a> and <a href="https://www.andrew.cmu.edu/user/kunz1/" target="_blank" rel="noopener">Prof. Kun Zhang</a>
+        I am a postdoctoral researcher in machine learning at
+        <a href="https://mbzuai.ac.ae/" target="_blank" rel="noopener">MBZUAI</a>,
+        working with <a href="https://mingming-gong.github.io/" target="_blank" rel="noopener">Assoc. Prof. Mingming Gong</a>
+        and <a href="https://www.andrew.cmu.edu/user/kunz1/" target="_blank" rel="noopener">Prof. Kun Zhang</a>.
       </p>
       <p>
-        Email: <a href="mailto:yuanyuan.wang@mbzuai.ac.ae">yuanyuan.wang@mbzuai.ac.ae</a><br>
-        Abu Dhabi, United Arab Emirates
+        I received my PhD in Mathematics and Statistics from the University of Melbourne (2025),
+        fortunately advised by <a href="https://mingming-gong.github.io/" target="_blank" rel="noopener">Mingming Gong</a> (principal),
+        <a href="https://sites.google.com/view/w-huang/" target="_blank" rel="noopener">Wei Huang</a>,
+        <a href="https://researchers.ms.unimelb.edu.au/~xgge@unimelb/" target="_blank" rel="noopener">Xi Geng</a>, and
+        <a href="https://biweihuang.com/" target="_blank" rel="noopener">Biwei Huang</a>.
       </p>
-      <!-- <p class="links">
-        <a href="https://scholar.google.com/citations?user=gT6kOFQAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Google Scholar</a>
-      </p> -->
+      <p>
+        My research studies continuous-time dynamical systems through the lens of
+        causality, focusing on those governed by ordinary and stochastic
+        differential equations (ODEs and SDEs). I develop identifiability and
+        asymptotic theory for such systems, moving from the observational space
+        in earlier work to the latent space, where dynamics are observed only
+        through an unknown nonlinear mixing. Current directions include
+        <strong>causal representation learning</strong> for latent ODE and SDE
+        models, and <strong>causal world models</strong> that recover physical
+        mechanisms from video.
+      </p>
     </div>
     <div class="photo">
       <img src="assets/imgs/Yuanyuan.jpg" alt="Photo of Yuanyuan Wang"
            onerror="this.style.display='none';this.nextElementSibling && (this.nextElementSibling.style.display='none');">
     </div>
   </header>
-
-  <section>
-    <h2>About</h2>
-    <p>
-      I am a postdoctoral researcher in machine learning at MBZUAI, Abu Dhabi.
-      I completed my Ph.D. in Mathematics and Statistics at the University of Melbourne in 2025
-      and earned my M.S. in Data Science there in 2021.
-      During my Ph.D., I was fortunate to be advised by <a href="https://mingming-gong.github.io/" target="_blank" rel="noopener">Mingming Gong</a> (principal),
-      <a href="https://sites.google.com/view/w-huang/" target="_blank" rel="noopener">Wei Huang</a>,
-      <a href="https://researchers.ms.unimelb.edu.au/~xgge@unimelb/" target="_blank" rel="noopener">Xi Geng</a>, and
-      <a href="https://biweihuang.com/" target="_blank" rel="noopener">Biwei Huang</a>.
-    </p>
-    <p>
-      I study <strong>continuous-time dynamical systems through the lens of causality</strong>,
-      particularly those governed by ordinary and stochastic differential equations (ODEs and SDEs),
-      the natural language of physical, biological, and embodied systems.
-      My earlier work established identifiability and causal inference for ODE/SDE systems in the
-      <strong>observational space</strong>; my current focus has moved into the
-      <strong>latent space</strong>, where the latent dynamics are observed only through
-      an unknown nonlinear mixing.
-    </p>
-    <p style="margin-bottom: 6px;"><strong>Current directions:</strong></p>
-    <ul class="simple">
-      <li><strong>Causal representation learning for continuous-time dynamical systems</strong>: identifiability theory and estimation for latent ODE and SDE models.</li>
-      <li><strong>Causal world models and video understanding</strong>: recovering physical mechanisms from raw video, with provably identifiable latent dynamics.</li>
-    </ul>
-    <p>Feel free to reach out if you'd like to chat or collaborate.</p>
-  </section>
 
   <section>
     <h2>Publications</h2>
