@@ -27,15 +27,15 @@
     font-family: var(--sans);
     color: var(--fg);
     background: var(--bg);
-    line-height: 1.65;
-    font-size: 16px;
+    line-height: 1.5;
+    font-size: 15px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
   .container {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 56px 28px 80px;
+    padding: 40px 24px 56px;
   }
   a {
     color: var(--accent);
@@ -89,25 +89,23 @@
     font-family: var(--serif);
     font-weight: 600;
     font-size: 1.35rem;
-    margin: 40px 0 14px;
+    margin: 28px 0 10px;
     padding-bottom: 6px;
     border-bottom: 1px solid var(--rule);
     letter-spacing: -0.005em;
   }
   h3 {
     font-family: var(--sans);
-    font-weight: 600;
-    font-size: 1.0rem;
+    font-weight: 500;
+    font-size: .95rem;
     color: var(--muted);
-    margin: 22px 0 10px;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
+    margin: 18px 0 8px;
   }
 
   /* Lists */
   ul.clean { list-style: none; padding: 0; margin: 0; }
   ul.clean > li {
-    padding: 10px 0;
+    padding: 6px 0;
     border-bottom: 1px dashed var(--rule);
   }
   ul.clean > li:last-child { border-bottom: none; }
@@ -116,31 +114,6 @@
   ul.clean .venue { color: var(--muted); font-style: italic; }
   ul.clean .self { font-weight: 700; }
   p.note { color: var(--muted); font-size: .88rem; margin: -4px 0 10px; }
-  ul.clean .tag {
-    display: inline-block;
-    font-size: .72rem;
-    font-weight: 600;
-    padding: 1px 8px;
-    margin-left: 6px;
-    border-radius: 999px;
-    background: #f3f4f6;
-    color: #4b5563;
-    letter-spacing: 0.03em;
-    vertical-align: middle;
-  }
-  ul.clean .tag.hl { background: #e0e7ff; color: var(--accent); }
-
-  /* Job-market callout */
-  .job-callout {
-    background: #eff6ff;
-    border-left: 4px solid var(--accent);
-    border-radius: 6px;
-    padding: 14px 18px;
-    margin: 8px 0 4px;
-    font-size: .96rem;
-    line-height: 1.6;
-  }
-  .job-callout strong { color: var(--accent); }
 
   ul.simple { padding-left: 1.1rem; margin: 6px 0; }
   ul.simple li { padding: 3px 0; }
@@ -269,13 +242,6 @@
     </div>
   </header>
 
-  <div class="job-callout">
-    <strong>On the job market for the 2026–2027 cycle.</strong>
-    I am seeking <strong>postdoctoral or faculty positions (lecturer / tenure-track assistant professor)</strong>, open globally.
-    My research interests span <strong>mathematical statistics, probability and stochastic processes, causal representation learning, and causal world models</strong>, with a focus on identifiability and asymptotic theory for continuous-time dynamical systems (ODEs and SDEs).
-    Please feel free to reach out.
-  </div>
-
   <section>
     <h2>About</h2>
     <p>
@@ -308,26 +274,22 @@
     <h2>Publications</h2>
     <ul class="clean">
       <li>
-        <a href="http://arxiv.org/abs/2606.00115" target="_blank" rel="noopener" class="title">Physics from Video: Identifiability of Time-Invariant Second-Order ODEs under Minimal Trajectory Conditions</a>
-        <span class="tag hl">ICML 2026</span><br>
+        <a href="http://arxiv.org/abs/2606.00115" target="_blank" rel="noopener" class="title">Physics from Video: Identifiability of Time-Invariant Second-Order ODEs under Minimal Trajectory Conditions</a><br>
         <span class="authors"><span class="self">Yuanyuan Wang</span><sup>*</sup>, Wenjie Wang<sup>*</sup>, Kun Zhang, Mingming Gong</span> <span style="color: var(--muted); font-size: .85rem;">(*equal contribution)</span><br>
         <span class="venue">International Conference on Machine Learning, 2026.</span>
       </li>
       <li>
-        <a href="https://proceedings.neurips.cc/paper_files/paper/2024/file/6ca5691fad39acd4ad984791b1338da8-Paper-Conference.pdf" target="_blank" rel="noopener" class="title">Identifiability Analysis of Linear ODE Systems with Hidden Confounders</a>
-        <span class="tag hl">NeurIPS 2024</span><br>
+        <a href="https://proceedings.neurips.cc/paper_files/paper/2024/file/6ca5691fad39acd4ad984791b1338da8-Paper-Conference.pdf" target="_blank" rel="noopener" class="title">Identifiability Analysis of Linear ODE Systems with Hidden Confounders</a><br>
         <span class="authors"><span class="self">Yuanyuan Wang</span>, Biwei Huang, Wei Huang, Xi Geng, Mingming Gong</span><br>
         <span class="venue">Advances in Neural Information Processing Systems, 2024.</span>
       </li>
       <li>
-        <a href="https://jmlr.org/papers/volume25/22-1159/22-1159.pdf" target="_blank" rel="noopener" class="title">Identifiability and Asymptotics in Learning Homogeneous Linear ODE Systems from Discrete Observations</a>
-        <span class="tag hl">JMLR 2024</span><br>
+        <a href="https://jmlr.org/papers/volume25/22-1159/22-1159.pdf" target="_blank" rel="noopener" class="title">Identifiability and Asymptotics in Learning Homogeneous Linear ODE Systems from Discrete Observations</a><br>
         <span class="authors"><span class="self">Yuanyuan Wang</span>, Wei Huang, Mingming Gong, Xi Geng, Tongliang Liu, Kun Zhang, Dacheng Tao</span><br>
         <span class="venue">Journal of Machine Learning Research, 2024.</span>
       </li>
       <li>
-        <a href="https://proceedings.neurips.cc/paper_files/paper/2023/file/ca642f8e1174012d67c05c1c9f969644-Paper-Conference.pdf" target="_blank" rel="noopener" class="title">Generator Identification for Linear SDEs with Additive and Multiplicative Noise</a>
-        <span class="tag hl">NeurIPS 2023</span><br>
+        <a href="https://proceedings.neurips.cc/paper_files/paper/2023/file/ca642f8e1174012d67c05c1c9f969644-Paper-Conference.pdf" target="_blank" rel="noopener" class="title">Generator Identification for Linear SDEs with Additive and Multiplicative Noise</a><br>
         <span class="authors"><span class="self">Yuanyuan Wang</span>, Xi Geng, Wei Huang, Biwei Huang, Mingming Gong</span><br>
         <span class="venue">Advances in Neural Information Processing Systems, 2023.</span>
       </li>
@@ -339,23 +301,19 @@
     <h2>Preprints</h2>
     <ul class="clean">
       <li>
-        <a href="https://arxiv.org/abs/2606.28228" target="_blank" rel="noopener" class="title">Disentangling Continuous-Time Latent Dynamics: Identifiability of Latent SDEs via Diffusion Shifts</a>
-        <span class="tag">Preprint</span><br>
+        <a href="https://arxiv.org/abs/2606.28228" target="_blank" rel="noopener" class="title">Disentangling Continuous-Time Latent Dynamics: Identifiability of Latent SDEs via Diffusion Shifts</a><br>
         <span class="authors"><span class="self">Yuanyuan Wang</span>, Wenjie Wang, Haoxuan Li, Mingming Gong, Kun Zhang</span>
       </li>
       <li>
-        <a href="https://arxiv.org/abs/2606.10607" target="_blank" rel="noopener" class="title">Causal Ensemble Agent: Hierarchical Causal Discovery with LLM-guided Expert Reweighting</a>
-        <span class="tag">Preprint</span><br>
+        <a href="https://arxiv.org/abs/2606.10607" target="_blank" rel="noopener" class="title">Causal Ensemble Agent: Hierarchical Causal Discovery with LLM-guided Expert Reweighting</a><br>
         <span class="authors">Xinyu Li, <span class="self">Yuanyuan Wang</span>, Haoxuan Li, Chuan Zhou, Erdun Gao, Bo Han, Tongliang Liu, Kun Zhang, Howard Bondell, Mingming Gong</span>
       </li>
       <li>
-        <a href="https://arxiv.org/abs/2606.10473" target="_blank" rel="noopener" class="title">AnisoLift: Anisotropic Latent Representations for Coarse Particle Liquid Enhancement</a>
-        <span class="tag">Preprint</span><br>
+        <a href="https://arxiv.org/abs/2606.10473" target="_blank" rel="noopener" class="title">AnisoLift: Anisotropic Latent Representations for Coarse Particle Liquid Enhancement</a><br>
         <span class="authors">Zhengqing Gao, Huaxi Huang, Runqi Lin, <span class="self">Yuanyuan Wang</span>, Meng Li, Xi Zhou, Tongliang Liu, Mingming Gong, Xiao Sun</span>
       </li>
       <li>
-        <a href="https://arxiv.org/abs/2602.00096" target="_blank" rel="noopener" class="title">Mirage2Matter: A Physically Grounded Gaussian World Model from Video</a>
-        <span class="tag">Preprint</span><br>
+        <a href="https://arxiv.org/abs/2602.00096" target="_blank" rel="noopener" class="title">Mirage2Matter: A Physically Grounded Gaussian World Model from Video</a><br>
         <span class="authors">Zhengqing Gao, Ziwen Li, Xin Wang, Jiaxin Huang, Zhenyang Ren, Mingkai Shao, Hanlue Zhang, Tianyu Huang, Yongkang Cheng, Yandong Guo, Runqi Lin, <span class="self">Yuanyuan Wang</span>, Tongliang Liu, Kun Zhang, Mingming Gong</span>
       </li>
     </ul>
