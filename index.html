@@ -116,6 +116,31 @@
   ul.clean .authors { color: #2c2c2c; }
   ul.clean .venue { color: var(--muted); font-style: italic; }
   ul.clean .self { font-weight: 700; }
+  /* Venue badges */
+  ul.pubs > li {
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    gap: 14px;
+    align-items: start;
+    padding: 8px 0;
+  }
+  .badge {
+    display: block;
+    text-align: left;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 21px;
+    color: var(--accent);
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+  .badge.preprint {
+    color: var(--muted);
+  }
+  @media (max-width: 480px) {
+    ul.pubs > li { grid-template-columns: 1fr; gap: 4px; }
+    .badge { justify-self: start; }
+  }
   p.note { color: var(--muted); font-size: .88rem; margin: -4px 0 10px; }
 
   ul.simple { padding-left: 1.1rem; margin: 6px 0; }
@@ -259,26 +284,62 @@
 
   <section>
     <h2>Publications</h2>
-    <ul class="clean">
+    <ul class="clean pubs">
       <li>
-        <a href="http://arxiv.org/abs/2606.00115" target="_blank" rel="noopener" class="title">Physics from Video: Identifiability of Time-Invariant Second-Order ODEs under Minimal Trajectory Conditions</a><br>
-        <span class="authors"><span class="self">Yuanyuan Wang</span><sup>*</sup>, Wenjie Wang<sup>*</sup>, Kun Zhang, Mingming Gong</span> <span style="color: var(--muted); font-size: .85rem;">(*equal contribution)</span><br>
-        <span class="venue">International Conference on Machine Learning, 2026.</span>
+        <span class="badge">NeurIPS 2026</span>
+        <div>
+          <a href="https://arxiv.org/abs/2606.28228" target="_blank" rel="noopener" class="title">Disentangling Continuous-Time Latent Dynamics: Identifiability of Latent SDEs via Diffusion Shifts</a><br>
+          <span class="authors"><span class="self">Yuanyuan Wang</span>, Wenjie Wang, Haoxuan Li, Mingming Gong, Kun Zhang</span><br>
+          <span class="venue">Advances in Neural Information Processing Systems, 2026.</span>
+        </div>
       </li>
       <li>
-        <a href="https://proceedings.neurips.cc/paper_files/paper/2024/file/6ca5691fad39acd4ad984791b1338da8-Paper-Conference.pdf" target="_blank" rel="noopener" class="title">Identifiability Analysis of Linear ODE Systems with Hidden Confounders</a><br>
-        <span class="authors"><span class="self">Yuanyuan Wang</span>, Biwei Huang, Wei Huang, Xi Geng, Mingming Gong</span><br>
-        <span class="venue">Advances in Neural Information Processing Systems, 2024.</span>
+        <span class="badge">NeurIPS 2026</span>
+        <div>
+          <span class="title">Bayesian Causal Experimental Design for CATE Estimation under Noncompliance</span><br>
+          <span class="authors">Erdun Gao, <span class="self">Yuanyuan Wang</span>, Liang Zhang, Yuhang Liu, Haoxuan Li, Mingming Gong, Dino Sejdinovic</span><br>
+          <span class="venue">Advances in Neural Information Processing Systems, 2026.</span>
+        </div>
       </li>
       <li>
-        <a href="https://jmlr.org/papers/volume25/22-1159/22-1159.pdf" target="_blank" rel="noopener" class="title">Identifiability and Asymptotics in Learning Homogeneous Linear ODE Systems from Discrete Observations</a><br>
-        <span class="authors"><span class="self">Yuanyuan Wang</span>, Wei Huang, Mingming Gong, Xi Geng, Tongliang Liu, Kun Zhang, Dacheng Tao</span><br>
-        <span class="venue">Journal of Machine Learning Research, 2024.</span>
+        <span class="badge">NeurIPS 2026</span>
+        <div>
+          <span class="title">Contractive Restoring Flows: Robust Reasoning Distillation via Orbital Stability</span><br>
+          <span class="authors">Dongqi Zuo, <span class="self">Yuanyuan Wang</span>, Chuan Zhou, Haoxuan Li, Mingming Gong</span><br>
+          <span class="venue">Advances in Neural Information Processing Systems, 2026.</span>
+        </div>
       </li>
       <li>
-        <a href="https://proceedings.neurips.cc/paper_files/paper/2023/file/ca642f8e1174012d67c05c1c9f969644-Paper-Conference.pdf" target="_blank" rel="noopener" class="title">Generator Identification for Linear SDEs with Additive and Multiplicative Noise</a><br>
-        <span class="authors"><span class="self">Yuanyuan Wang</span>, Xi Geng, Wei Huang, Biwei Huang, Mingming Gong</span><br>
-        <span class="venue">Advances in Neural Information Processing Systems, 2023.</span>
+        <span class="badge">ICML 2026</span>
+        <div>
+          <a href="http://arxiv.org/abs/2606.00115" target="_blank" rel="noopener" class="title">Physics from Video: Identifiability of Time-Invariant Second-Order ODEs under Minimal Trajectory Conditions</a><br>
+          <span class="authors"><span class="self">Yuanyuan Wang</span><sup>*</sup>, Wenjie Wang<sup>*</sup>, Kun Zhang, Mingming Gong</span> <span style="color: var(--muted); font-size: .85rem;">(*equal contribution)</span><br>
+          <span class="venue">International Conference on Machine Learning, 2026.</span>
+        </div>
+      </li>
+      <li>
+        <span class="badge">NeurIPS 2024</span>
+        <div>
+          <a href="https://proceedings.neurips.cc/paper_files/paper/2024/file/6ca5691fad39acd4ad984791b1338da8-Paper-Conference.pdf" target="_blank" rel="noopener" class="title">Identifiability Analysis of Linear ODE Systems with Hidden Confounders</a><br>
+          <span class="authors"><span class="self">Yuanyuan Wang</span>, Biwei Huang, Wei Huang, Xi Geng, Mingming Gong</span><br>
+          <span class="venue">Advances in Neural Information Processing Systems, 2024.</span>
+        </div>
+      </li>
+      <li>
+        <span class="badge">JMLR 2024</span>
+        <div>
+          <a href="https://jmlr.org/papers/volume25/22-1159/22-1159.pdf" target="_blank" rel="noopener" class="title">Identifiability and Asymptotics in Learning Homogeneous Linear ODE Systems from Discrete Observations</a><br>
+          <span class="authors"><span class="self">Yuanyuan Wang</span>, Wei Huang, Mingming Gong, Xi Geng, Tongliang Liu, Kun Zhang, Dacheng Tao</span><br>
+          <span class="venue">Journal of Machine Learning Research, 2024.</span>
+        </div>
+      </li>
+      <li>
+        <span class="badge">NeurIPS 2023</span>
+        <div>
+          <a href="https://proceedings.neurips.cc/paper_files/paper/2023/file/ca642f8e1174012d67c05c1c9f969644-Paper-Conference.pdf" target="_blank" rel="noopener" class="title">Generator Identification for Linear SDEs with Additive and Multiplicative Noise</a><br>
+          <span class="authors"><span class="self">Yuanyuan Wang</span>, Xi Geng, Wei Huang, Biwei Huang, Mingming Gong</span><br>
+          <span class="venue">Advances in Neural Information Processing Systems, 2023.</span>
+        </div>
       </li>
     </ul>
 
@@ -286,22 +347,27 @@
 
   <section>
     <h2>Preprints</h2>
-    <ul class="clean">
+    <ul class="clean pubs">
       <li>
-        <a href="https://arxiv.org/abs/2606.28228" target="_blank" rel="noopener" class="title">Disentangling Continuous-Time Latent Dynamics: Identifiability of Latent SDEs via Diffusion Shifts</a><br>
-        <span class="authors"><span class="self">Yuanyuan Wang</span>, Wenjie Wang, Haoxuan Li, Mingming Gong, Kun Zhang</span>
+        <span class="badge preprint">arXiv 2026</span>
+        <div>
+          <a href="https://arxiv.org/abs/2606.10607" target="_blank" rel="noopener" class="title">Causal Ensemble Agent: Hierarchical Causal Discovery with LLM-guided Expert Reweighting</a><br>
+          <span class="authors">Xinyu Li, <span class="self">Yuanyuan Wang</span>, Haoxuan Li, Chuan Zhou, Erdun Gao, Bo Han, Tongliang Liu, Kun Zhang, Howard Bondell, Mingming Gong</span>
+        </div>
       </li>
       <li>
-        <a href="https://arxiv.org/abs/2606.10607" target="_blank" rel="noopener" class="title">Causal Ensemble Agent: Hierarchical Causal Discovery with LLM-guided Expert Reweighting</a><br>
-        <span class="authors">Xinyu Li, <span class="self">Yuanyuan Wang</span>, Haoxuan Li, Chuan Zhou, Erdun Gao, Bo Han, Tongliang Liu, Kun Zhang, Howard Bondell, Mingming Gong</span>
+        <span class="badge preprint">arXiv 2026</span>
+        <div>
+          <a href="https://arxiv.org/abs/2606.10473" target="_blank" rel="noopener" class="title">AnisoLift: Anisotropic Latent Representations for Coarse Particle Liquid Enhancement</a><br>
+          <span class="authors">Zhengqing Gao, Huaxi Huang, Runqi Lin, <span class="self">Yuanyuan Wang</span>, Meng Li, Xi Zhou, Tongliang Liu, Mingming Gong, Xiao Sun</span>
+        </div>
       </li>
       <li>
-        <a href="https://arxiv.org/abs/2606.10473" target="_blank" rel="noopener" class="title">AnisoLift: Anisotropic Latent Representations for Coarse Particle Liquid Enhancement</a><br>
-        <span class="authors">Zhengqing Gao, Huaxi Huang, Runqi Lin, <span class="self">Yuanyuan Wang</span>, Meng Li, Xi Zhou, Tongliang Liu, Mingming Gong, Xiao Sun</span>
-      </li>
-      <li>
-        <a href="https://arxiv.org/abs/2602.00096" target="_blank" rel="noopener" class="title">Mirage2Matter: A Physically Grounded Gaussian World Model from Video</a><br>
-        <span class="authors">Zhengqing Gao, Ziwen Li, Xin Wang, Jiaxin Huang, Zhenyang Ren, Mingkai Shao, Hanlue Zhang, Tianyu Huang, Yongkang Cheng, Yandong Guo, Runqi Lin, <span class="self">Yuanyuan Wang</span>, Tongliang Liu, Kun Zhang, Mingming Gong</span>
+        <span class="badge preprint">arXiv 2026</span>
+        <div>
+          <a href="https://arxiv.org/abs/2602.00096" target="_blank" rel="noopener" class="title">Mirage2Matter: A Physically Grounded Gaussian World Model from Video</a><br>
+          <span class="authors">Zhengqing Gao, Ziwen Li, Xin Wang, Jiaxin Huang, Zhenyang Ren, Mingkai Shao, Hanlue Zhang, Tianyu Huang, Yongkang Cheng, Yandong Guo, Runqi Lin, <span class="self">Yuanyuan Wang</span>, Tongliang Liu, Kun Zhang, Mingming Gong</span>
+        </div>
       </li>
     </ul>
   </section>
@@ -317,7 +383,8 @@
   <section>
     <h2>Service</h2>
     <ul class="simple">
-      <li>Reviewer: NeurIPS (2025, 2026), ICML (2026), ICLR (2025, 2026), UAI (2025), TMLR (2025, 2026), AJCAI (2023-2025).</li>
+      <li>Area Chair: ICLR (2027).</li>
+      <li>Reviewer: NeurIPS (2025, 2026), ICML (2026), ICLR (2025, 2026), UAI (2025), TMLR (2025, 2026), AJCAI (2023-2026).</li>
     </ul>
   </section>
 
